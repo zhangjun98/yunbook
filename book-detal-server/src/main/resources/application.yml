@@ -1,0 +1,30 @@
+server:
+  port: 8003
+spring:
+  application:
+    name: book-detal-server
+  datasource:
+    druid:
+      url: jdbc:mysql:///db_szbook
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: root
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+    redis:
+      host: 127.0.0.1
+      port: 6379
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+
+mybatis:
+  mapper-locations: classpath:mappers/*Mapper.xml
+  type-aliases-package: com.modo.bookdetalserver.Beans
+
+
+

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.modo.bookdetalserver.dao.bookDao">
+    <!--
+
+
+
+
+
+
+
+
+
+
+
+        -->
+    <resultMap id="BookMap" type="book">
+        <id column="book_id" property="bookId"></id>
+        <result column="book_name" property="bookName"></result>
+        <result column="author" property="author"></result>
+        <result column="introduce" property="introduce"></result>
+        <result column="image_url" property="imageUrl"></result>
+        <result column="publisher" property="publisher"></result>
+        <result column="isbn" property="isbn"></result>
+        <result column="publish_time" property="publishTime"></result>
+        <result column="price" property="price"></result>
+        <result column="sale_price" property="salePrice"></result>
+        <result column="count" property="count"></result>
+        <result column="detail" property="detail"></result>
+        <result column="type_id" property="typeId"></result>
+    </resultMap>
+    <select id="getById" resultMap="BookMap">
+        select  * from tb_book where book_id = #{bookId}
+    </select>
+</mapper>

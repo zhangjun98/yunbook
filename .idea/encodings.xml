@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/book-detal-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/book-list-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dshoppingcar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/only-zuul" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shopping-list-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/store-book-serv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/store-book-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/typeprovider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/url-list-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/user-address-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/user-login-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zuul" charset="UTF-8" />
+  </component>
+</project>

@@ -1,0 +1,23 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+# 为了让所有的服务都可以访问到
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+zuul:
+  routes:
+    typeprovider: /booktype/**
+    book-detal-server: /bookdetal/**
+    book-list-server: /booklist/**
+    user-login-service: /userlogin/**

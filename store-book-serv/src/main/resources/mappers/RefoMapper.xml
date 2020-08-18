@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.modo.storebookserv.dao.RefoDao">
+
+    <!-- private int repoId;
+    private String repoName;-->
+    <resultMap id="InfoMap" type="com.modo.storebookserv.Beans.Repo">
+        <result column="repo_id" property="repoId"></result>
+        <result column="repo_name" property="repoName"></result>
+    </resultMap>
+    <select id="getBytid" resultMap="InfoMap">
+        select * from repoinfo where repo_id in (select rid from store where bid = #{bid}  )
+    </select>
+
+
+</mapper>

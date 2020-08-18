@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.modo.typeprovider.dao.TypeDao">
+    <!--private Integer tid;// 类型id
+    private String tname; //
+    private Integer level;// level级目录
+    private Integer pid;//  父目录id
+    private List<Type> list; // 子目录-->
+
+
+
+    <resultMap id="TypeMap" type="Type">
+        <id property="tid" column="tid"></id>
+        <result property="tname"  column="tname"></result>
+        <result property="level"  column="level"></result>
+        <result property="pid"  column="pid"></result>
+    </resultMap>
+
+    <resultMap id="TypeMap2" type="Type">
+        <id property="tid" column="tid"></id>
+        <result property="tname"  column="tname"></result>
+        <result property="level"  column="level"></result>
+        <result property="pid"  column="pid"></result>
+        <collection property="list" select="getByPid" column="tid"></collection>
+    </resultMap>
+    <select id="getByTid" resultType="type">
+        select * from types where tid = #{tid}
+    </select>
+
+    <select id="getByPid" resultMap="TypeMap2">
+        select * from types where pid = #{pid}
+    </select>
+
+    <select id="getAll" resultMap="TypeMap2" resultSets="java.util.List" >
+        select * from types where pid = 0
+    </select>
+
+</mapper>

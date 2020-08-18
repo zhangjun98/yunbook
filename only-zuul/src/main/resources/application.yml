@@ -1,0 +1,21 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: only-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+# 为了让所有的服务都可以访问到
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+zuul:
+  routes:
+    dshoppingcar: /shopping/**
+    shopping-list-server: /shoppinglist/**

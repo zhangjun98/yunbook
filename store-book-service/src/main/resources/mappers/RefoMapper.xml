@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.modo.storebookservice.dao.RefoDao">
+
+    <resultMap id="InfoMap" type="repo">
+        <result column="repo_id" property="repoId"></result>
+        <result column="repo_name" property="repoName"></result>
+    </resultMap>
+    <select id="getBytid" resultType="InfoMap">
+        select * from repoinfo
+    </select>
+
+
+</mapper>

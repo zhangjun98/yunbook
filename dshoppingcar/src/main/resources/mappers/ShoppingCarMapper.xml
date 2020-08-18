@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.modo.dshoppingcar.dao.ShoppingcarDao">
+
+<insert id="AddShoppingcar" >
+    insert  into shopping(bid,uid,repo_name,num) values (#{bid},#{uid},#{repoName},#{num})
+</insert>
+
+</mapper>
